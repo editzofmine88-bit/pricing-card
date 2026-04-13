@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        overflow-x: hidden;
+        background-color: #f7f7ff;
+        font-family: "Montserrat", sans-serif;
+        height:100vh;
+    }
+      .pricing-table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h2 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        font-size: 35px;
+        color: hsl(233, 13%, 49%);
+      }
+      .toggle-bar {
+        margin-bottom: 50px;
+        color: hsl(233, 13%, 49%);
+        display: flex;
+        align-items: center;
+        gap:10px;
+      }
+      .pricing-cards {
+        display: flex;
+        justify-content: center;
+        color: hsl(233, 13%, 49%);
+        border-radius: 5px;
+      }
+      .pricing-card {
+        background-color: #fff;
+        padding: 50px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      .card-title {
+        margin-bottom: 30px;
+      }
+      .card-price {
+        color: hsl(237, 12%, 34%);
+        font-size: 45px;
+        margin-bottom: 30px;
+      }
+      .popular-card-price {
+        color: #fff;
+        font-size: 45px;
+        margin-bottom: 30px;
+      }
+      hr {
+        border: 0;
+        border-top: 2px solid hsl(233, 100%, 95%);
+      }
+      li {
+        margin: 20px 0;
+        list-style-type: none;
+      }
+      .btn {
+        background: linear-gradient(
+          135deg,
+          rgba(163, 168, 240, 1) 0%,
+          rgba(105, 111, 221, 1) 100%
+        );
+        color: #fff;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 30px;
+        font-size: 16px;
+        font-family: "Montserrat", sans-serif;
+      }
+      .popular-btn {
+        background-color: #fff;
+        color: rgba(105, 111, 221, 1);
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 30px;
+        font-size: 16px;
+        font-family: "Montserrat", sans-serif;
+      }
+      .popular {
+        background: linear-gradient(
+          135deg,
+          rgba(163, 168, 240, 1) 0%,
+          rgba(105, 111, 221, 1) 100%
+        );
+        color: #fff;
+        transform: scale(1.1);
+        z-index: 1;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+     
+
+  .checkbox-wrapper-6 .tgl {
+    display: none;
+  }
+  .checkbox-wrapper-6 .tgl,
+  .checkbox-wrapper-6 .tgl:after,
+  .checkbox-wrapper-6 .tgl:before,
+  .checkbox-wrapper-6 .tgl *,
+  .checkbox-wrapper-6 .tgl *:after,
+  .checkbox-wrapper-6 .tgl *:before,
+  .checkbox-wrapper-6 .tgl + .tgl-btn {
+    box-sizing: border-box;
+  }
+  .checkbox-wrapper-6 .tgl::-moz-selection,
+  .checkbox-wrapper-6 .tgl:after::-moz-selection,
+  .checkbox-wrapper-6 .tgl:before::-moz-selection,
+  .checkbox-wrapper-6 .tgl *::-moz-selection,
+  .checkbox-wrapper-6 .tgl *:after::-moz-selection,
+  .checkbox-wrapper-6 .tgl *:before::-moz-selection,
+  .checkbox-wrapper-6 .tgl + .tgl-btn::-moz-selection,
+  .checkbox-wrapper-6 .tgl::selection,
+  .checkbox-wrapper-6 .tgl:after::selection,
+  .checkbox-wrapper-6 .tgl:before::selection,
+  .checkbox-wrapper-6 .tgl *::selection,
+  .checkbox-wrapper-6 .tgl *:after::selection,
+  .checkbox-wrapper-6 .tgl *:before::selection,
+  .checkbox-wrapper-6 .tgl + .tgl-btn::selection {
+    background: none;
+  }
+  .checkbox-wrapper-6 .tgl + .tgl-btn {
+    outline: 0;
+    display: block;
+    width: 4em;
+    height: 2em;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .checkbox-wrapper-6 .tgl + .tgl-btn:after,
+  .checkbox-wrapper-6 .tgl + .tgl-btn:before {
+    position: relative;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+  }
+  .checkbox-wrapper-6 .tgl + .tgl-btn:after {
+    left: 0;
+  }
+  .checkbox-wrapper-6 .tgl + .tgl-btn:before {
+    display: none;
+  }
+  .checkbox-wrapper-6 .tgl:checked + .tgl-btn:after {
+    left: 50%;
+  }
+
+  .checkbox-wrapper-6 .tgl-light + .tgl-btn {
+    background: #f0f0f0;
+    border-radius: 2em;
+    padding: 2px;
+    transition: all 0.4s ease;
+  }
+  .checkbox-wrapper-6 .tgl-light + .tgl-btn:after {
+    border-radius: 50%;
+    background: #fff;
+    transition: all 0.2s ease;
+  }
+  .checkbox-wrapper-6 .tgl-light:checked + .tgl-btn {
+    background: rgb(123, 129, 225);
+  }
+@media (min-width: 758px) and (max-width: 875px) {
+.pricing-cards
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap:30px;
+}
+.popular
+{
+    transform: scale(1);
+}
+}
+@media (max-width: 758px) {
+.pricing-cards
+{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    padding: 0 30px;
+
+}
+.pricing-card
+{
+     width: 100%;
+  max-width: 350px;
+}
+.popular
+{
+    transform: scale(1);
+}
+}
+    </style>
+  </head>
+  <body>
+    <div class="pricing-table">
+      <h2>Our Pricing</h2>
+      <div class="toggle-bar">
+        <label>Annually</label>
+
+        <div class="checkbox-wrapper-6">
+  <input class="tgl tgl-light" id="cb1-6" type="checkbox"/>
+  <label class="tgl-btn" for="cb1-6">
+</div>
+        <label>Monthly</label>
+      </div>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <h3 class="card-title">Basic</h3>
+          <p class="card-price">$199.99</p>
+
+          <ul>
+            <hr />
+            <li>500 GB Storage</li>
+            <hr />
+            <li>2 Users Allowed</li>
+            <hr />
+            <li>Send up to 3 GB</li>
+            <hr />
+          </ul>
+          <button class="btn">Learn More</button>
+        </div>
+        <div class="pricing-card popular">
+          <h3 class="card-title">Professional</h3>
+          <p class="popular-card-price">$249.99</p>
+
+          <ul>
+            <hr />
+            <li>1 TB Storage</li>
+            <hr />
+            <li>5 Users Allowed</li>
+            <hr />
+            <li>Send up to 10 GB</li>
+            <hr />
+          </ul>
+          <button class="popular-btn">Learn More</button>
+        </div>
+        <div class="pricing-card">
+          <h3 class="card-title">Master</h3>
+          <p class="card-price">$399.99</p>
+
+          <ul>
+            <hr />
+            <li>2 TB Storage</li>
+            <hr />
+            <li>10 Users Allowed</li>
+            <hr />
+            <li>Send up to 20 GB</li>
+            <hr />
+          </ul>
+          <button class="btn">Learn More</button>
+        </div>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>
