@@ -52,6 +52,7 @@
         border-radius: 5px;
       }
       .pricing-card {
+         width: 300px;
         background-color: #fff;
         padding: 50px;
         text-align: center;
@@ -238,7 +239,7 @@
       <div class="pricing-cards">
         <div class="pricing-card">
           <h3 class="card-title">Basic</h3>
-          <p class="card-price">$199.99</p>
+          <p class="card-price" data-month="$19.99" data-year="$199.99">$199.99</p>
 
           <ul>
             <hr />
@@ -253,7 +254,7 @@
         </div>
         <div class="pricing-card popular">
           <h3 class="card-title">Professional</h3>
-          <p class="popular-card-price">$249.99</p>
+          <p class="card-price popular-card-price" data-month="$24.99" data-year="$249.99">$249.99</p>
 
           <ul>
             <hr />
@@ -268,7 +269,7 @@
         </div>
         <div class="pricing-card">
           <h3 class="card-title">Master</h3>
-          <p class="card-price">$399.99</p>
+          <p class="card-price" data-month="$39.99" data-year="$399.99">$399.99</p>
 
           <ul>
             <hr />
@@ -283,6 +284,24 @@
         </div>
       </div>
     </div>
-    <script></script>
+    <script>
+      const toggleBtn = document.querySelector("#cb1-6");
+      const prices = document.querySelectorAll(".card-price");
+
+      toggleBtn.addEventListener("change",function(){
+        prices.forEach(price =>{
+          var monthly = price.getAttribute("data-month");
+          var yearly = price.getAttribute("data-year");
+
+          if(toggleBtn.checked){
+            price.textContent = `${monthly}`;
+          }
+          else{
+             price.textContent = `${yearly}`;
+          }
+        });
+      });
+        
+    </script>
   </body>
 </html>
